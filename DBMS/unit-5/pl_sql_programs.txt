@@ -1,0 +1,71 @@
+set serveroutput on
+begin
+dbms_output.put_line('Hello');
+end;
+/
+
+adding two numbers:
+
+declare
+a integer :=10;
+b integer :=20;
+c integer;
+begin
+c:=a+b;
+dbms_output.put_line('value of c:'||c);
+end;
+/
+
+
+
+plsql loop::
+
+declare
+i number:=1;
+begin
+loop
+exit when i>10;
+dbms_output.put_line(i);
+i:=i+1;
+end loop;
+end;
+/
+
+
+
+
+
+plsql while loop:
+
+declare
+i integer:=10;
+begin
+while i>=0 loop
+dbms_output.put_line(i);
+i:=i-1;
+end loop;
+ end;
+/
+
+
+
+plsql for loop:
+
+begin
+for k in 1..10 loop
+dbms_output.put_line(k);
+end loop;
+end;
+/
+
+
+
+SQL>  create or replace procedure welcome_msg(p_name in varchar2)
+     is
+     begin
+     dbms_output.put_line('Welcome  '||p_name);
+     end;
+    /
+  7  
+
+SQL> exec welcome_msg('kuldeep');
